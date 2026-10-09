@@ -1,0 +1,847 @@
+
+========================================================================
+SESSION : 2026-10-01 21:45:30
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 188
+Images validation : 52
+Images test : 60
+
+ESSAI 1 : dropout_0.45_0.20
+Dropout : 0.45 / 0.2
+Meilleure epoque : 87
+Epoques executees : 99
+Loss train a la meilleure epoque : 0.3179
+Accuracy train a la meilleure epoque : 0.8670
+Validation loss : 0.4327
+Validation accuracy : 0.8269
+Validation F1 macro : 0.8330
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             3
+1_Invites                  0            13             3
+2_Autres                   3             0            15
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.8333      0.8333      0.8333          18
+1_Invites           1.0000      0.8125      0.8966          16
+2_Autres            0.7143      0.8333      0.7692          18
+Moyenne macro       0.8492      0.8264      0.8330          52
+
+ESSAI 2 : dropout_0.35_0.15
+Dropout : 0.35 / 0.15
+Meilleure epoque : 55
+Epoques executees : 67
+Loss train a la meilleure epoque : 0.2301
+Accuracy train a la meilleure epoque : 0.9255
+Validation loss : 0.4141
+Validation accuracy : 0.8462
+Validation F1 macro : 0.8523
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     14             0             4
+1_Invites                  0            14             2
+2_Autres                   2             0            16
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.8750      0.7778      0.8235          18
+1_Invites           1.0000      0.8750      0.9333          16
+2_Autres            0.7273      0.8889      0.8000          18
+Moyenne macro       0.8674      0.8472      0.8523          52
+
+ESSAI 3 : dropout_0.25_0.10
+Dropout : 0.25 / 0.1
+Meilleure epoque : 49
+Epoques executees : 61
+Loss train a la meilleure epoque : 0.1511
+Accuracy train a la meilleure epoque : 0.9628
+Validation loss : 0.3959
+Validation accuracy : 0.8654
+Validation F1 macro : 0.8706
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     14             0             4
+1_Invites                  0            15             1
+2_Autres                   2             0            16
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.8750      0.7778      0.8235          18
+1_Invites           1.0000      0.9375      0.9677          16
+2_Autres            0.7619      0.8889      0.8205          18
+Moyenne macro       0.8790      0.8681      0.8706          52
+
+MEILLEUR MLP SELECTIONNE : dropout_0.25_0.10
+F1 macro validation : 0.8706
+Loss validation : 0.3959
+Loss test : 0.2374
+Accuracy test : 0.9333
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     17             0             3
+1_Invites                  0            20             0
+2_Autres                   1             0            19
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.9444      0.8500      0.8947          20
+1_Invites           1.0000      1.0000      1.0000          20
+2_Autres            0.8636      0.9500      0.9048          20
+Moyenne macro       0.9360      0.9333      0.9332          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-01 21:48:04
+Comparaison : trois MLP et un CNN compact, selection par F1 macro validation
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 188
+Images validation : 52
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.45_0.20
+Configuration : {'nom': 'mlp_dropout_0.45_0.20', 'type': 'MLP', 'dropout_1': 0.45, 'dropout_2': 0.2}
+Parametres du modele : 133315
+Meilleure epoque : 87
+Epoques executees : 99
+Loss train a la meilleure epoque : 0.3179
+Accuracy train a la meilleure epoque : 0.8670
+Validation loss : 0.4327
+Validation accuracy : 0.8269
+Validation F1 macro : 0.8330
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             3
+1_Invites                  0            13             3
+2_Autres                   3             0            15
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.8333      0.8333      0.8333          18
+1_Invites           1.0000      0.8125      0.8966          16
+2_Autres            0.7143      0.8333      0.7692          18
+Moyenne macro       0.8492      0.8264      0.8330          52
+
+ESSAI 2 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 55
+Epoques executees : 67
+Loss train a la meilleure epoque : 0.2690
+Accuracy train a la meilleure epoque : 0.8830
+Validation loss : 0.4028
+Validation accuracy : 0.8846
+Validation F1 macro : 0.8886
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             3
+1_Invites                  0            14             2
+2_Autres                   1             0            17
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.9375      0.8333      0.8824          18
+1_Invites           1.0000      0.8750      0.9333          16
+2_Autres            0.7727      0.9444      0.8500          18
+Moyenne macro       0.9034      0.8843      0.8886          52
+
+ESSAI 3 : mlp_dropout_0.25_0.10
+Configuration : {'nom': 'mlp_dropout_0.25_0.10', 'type': 'MLP', 'dropout_1': 0.25, 'dropout_2': 0.1}
+Parametres du modele : 133315
+Meilleure epoque : 55
+Epoques executees : 67
+Loss train a la meilleure epoque : 0.2423
+Accuracy train a la meilleure epoque : 0.9309
+Validation loss : 0.5149
+Validation accuracy : 0.8077
+Validation F1 macro : 0.8147
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             3
+1_Invites                  0            13             3
+2_Autres                   4             0            14
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.7895      0.8333      0.8108          18
+1_Invites           1.0000      0.8125      0.8966          16
+2_Autres            0.7000      0.7778      0.7368          18
+Moyenne macro       0.8298      0.8079      0.8147          52
+
+ESSAI 4 : cnn_compact_8_16_24
+Configuration : {'nom': 'cnn_compact_8_16_24', 'type': 'CNN', 'dropout': 0.3}
+Parametres du modele : 5627
+Meilleure epoque : 96
+Epoques executees : 108
+Loss train a la meilleure epoque : 0.9133
+Accuracy train a la meilleure epoque : 0.5745
+Validation loss : 0.9361
+Validation accuracy : 0.5192
+Validation F1 macro : 0.4367
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     16             0             2
+1_Invites                  4             1            11
+2_Autres                   7             1            10
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5926      0.8889      0.7111          18
+1_Invites           0.5000      0.0625      0.1111          16
+2_Autres            0.4348      0.5556      0.4878          18
+Moyenne macro       0.5091      0.5023      0.4367          52
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.8886
+Loss validation : 0.4028
+Loss test : 0.2766
+Accuracy test : 0.9500
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     17             0             3
+1_Invites                  0            20             0
+2_Autres                   0             0            20
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               1.0000      0.8500      0.9189          20
+1_Invites           1.0000      1.0000      1.0000          20
+2_Autres            0.8696      1.0000      0.9302          20
+Moyenne macro       0.9565      0.9500      0.9497          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-01 21:52:02
+Comparaison : trois MLP et un CNN compact, selection par F1 macro validation
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 188
+Images validation : 52
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.45_0.20
+Configuration : {'nom': 'mlp_dropout_0.45_0.20', 'type': 'MLP', 'dropout_1': 0.45, 'dropout_2': 0.2}
+Parametres du modele : 133315
+Meilleure epoque : 87
+Epoques executees : 99
+Loss train a la meilleure epoque : 0.3179
+Accuracy train a la meilleure epoque : 0.8670
+Validation loss : 0.4327
+Validation accuracy : 0.8269
+Validation F1 macro : 0.8330
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             3
+1_Invites                  0            13             3
+2_Autres                   3             0            15
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.8333      0.8333      0.8333          18
+1_Invites           1.0000      0.8125      0.8966          16
+2_Autres            0.7143      0.8333      0.7692          18
+Moyenne macro       0.8492      0.8264      0.8330          52
+
+ESSAI 2 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 55
+Epoques executees : 67
+Loss train a la meilleure epoque : 0.2690
+Accuracy train a la meilleure epoque : 0.8830
+Validation loss : 0.4028
+Validation accuracy : 0.8846
+Validation F1 macro : 0.8886
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             3
+1_Invites                  0            14             2
+2_Autres                   1             0            17
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.9375      0.8333      0.8824          18
+1_Invites           1.0000      0.8750      0.9333          16
+2_Autres            0.7727      0.9444      0.8500          18
+Moyenne macro       0.9034      0.8843      0.8886          52
+
+ESSAI 3 : mlp_dropout_0.25_0.10
+Configuration : {'nom': 'mlp_dropout_0.25_0.10', 'type': 'MLP', 'dropout_1': 0.25, 'dropout_2': 0.1}
+Parametres du modele : 133315
+Meilleure epoque : 55
+Epoques executees : 67
+Loss train a la meilleure epoque : 0.2423
+Accuracy train a la meilleure epoque : 0.9309
+Validation loss : 0.5149
+Validation accuracy : 0.8077
+Validation F1 macro : 0.8147
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             3
+1_Invites                  0            13             3
+2_Autres                   4             0            14
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.7895      0.8333      0.8108          18
+1_Invites           1.0000      0.8125      0.8966          16
+2_Autres            0.7000      0.7778      0.7368          18
+Moyenne macro       0.8298      0.8079      0.8147          52
+
+ESSAI 4 : cnn_compact_8_16_24
+Configuration : {'nom': 'cnn_compact_8_16_24', 'type': 'CNN', 'dropout': 0.3}
+Parametres du modele : 5627
+Meilleure epoque : 96
+Epoques executees : 108
+Loss train a la meilleure epoque : 0.9133
+Accuracy train a la meilleure epoque : 0.5745
+Validation loss : 0.9361
+Validation accuracy : 0.5192
+Validation F1 macro : 0.4367
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     16             0             2
+1_Invites                  4             1            11
+2_Autres                   7             1            10
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5926      0.8889      0.7111          18
+1_Invites           0.5000      0.0625      0.1111          16
+2_Autres            0.4348      0.5556      0.4878          18
+Moyenne macro       0.5091      0.5023      0.4367          52
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.8886
+Loss validation : 0.4028
+Loss test : 0.2766
+Accuracy test : 0.9500
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     17             0             3
+1_Invites                  0            20             0
+2_Autres                   0             0            20
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               1.0000      0.8500      0.9189          20
+1_Invites           1.0000      1.0000      1.0000          20
+2_Autres            0.8696      1.0000      0.9302          20
+Moyenne macro       0.9565      0.9500      0.9497          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-01 21:57:14
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 188
+Images validation : 52
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 55
+Epoques executees : 67
+Loss train a la meilleure epoque : 0.2690
+Accuracy train a la meilleure epoque : 0.8830
+Validation loss : 0.4028
+Validation accuracy : 0.8846
+Validation F1 macro : 0.8886
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             3
+1_Invites                  0            14             2
+2_Autres                   1             0            17
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.9375      0.8333      0.8824          18
+1_Invites           1.0000      0.8750      0.9333          16
+2_Autres            0.7727      0.9444      0.8500          18
+Moyenne macro       0.9034      0.8843      0.8886          52
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.8886
+Loss validation : 0.4028
+Loss test : 0.2766
+Accuracy test : 0.9500
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     17             0             3
+1_Invites                  0            20             0
+2_Autres                   0             0            20
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               1.0000      0.8500      0.9189          20
+1_Invites           1.0000      1.0000      1.0000          20
+2_Autres            0.8696      1.0000      0.9302          20
+Moyenne macro       0.9565      0.9500      0.9497          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-02 21:06:39
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 190
+Images validation : 50
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 68
+Epoques executees : 80
+Loss train a la meilleure epoque : 0.3865
+Accuracy train a la meilleure epoque : 0.8263
+Validation loss : 0.5288
+Validation accuracy : 0.7800
+Validation F1 macro : 0.7795
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     14             0             2
+1_Invites                  0            16             0
+2_Autres                   9             0             9
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.6087      0.8750      0.7179          16
+1_Invites           1.0000      1.0000      1.0000          16
+2_Autres            0.8182      0.5000      0.6207          18
+Moyenne macro       0.8090      0.7917      0.7795          50
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.7795
+Loss validation : 0.5288
+Loss test : 0.4406
+Accuracy test : 0.7833
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                      9             0            11
+1_Invites                  0            20             0
+2_Autres                   2             0            18
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.8182      0.4500      0.5806          20
+1_Invites           1.0000      1.0000      1.0000          20
+2_Autres            0.6207      0.9000      0.7347          20
+Moyenne macro       0.8130      0.7833      0.7718          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-02 21:30:56
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 204
+Images validation : 54
+Images test : 78
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 80
+Epoques executees : 92
+Loss train a la meilleure epoque : 0.4139
+Accuracy train a la meilleure epoque : 0.8480
+Validation loss : 0.5173
+Validation accuracy : 0.7593
+Validation F1 macro : 0.7584
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     17             0             3
+1_Invites                  0            16             0
+2_Autres                  10             0             8
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.6296      0.8500      0.7234          20
+1_Invites           1.0000      1.0000      1.0000          16
+2_Autres            0.7273      0.4444      0.5517          18
+Moyenne macro       0.7856      0.7648      0.7584          54
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.7584
+Loss validation : 0.5173
+Loss test : 0.3158
+Accuracy test : 0.9103
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     34             0             4
+1_Invites                  0            20             0
+2_Autres                   2             1            17
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.9444      0.8947      0.9189          38
+1_Invites           0.9524      1.0000      0.9756          20
+2_Autres            0.8095      0.8500      0.8293          20
+Moyenne macro       0.9021      0.9149      0.9079          78
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-02 22:04:56
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 230
+Images validation : 62
+Images test : 112
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 97
+Epoques executees : 109
+Loss train a la meilleure epoque : 0.3887
+Accuracy train a la meilleure epoque : 0.8391
+Validation loss : 0.5119
+Validation accuracy : 0.7903
+Validation F1 macro : 0.7837
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     19             0             1
+1_Invites                  0            20             0
+2_Autres                  12             0            10
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.6129      0.9500      0.7451          20
+1_Invites           1.0000      1.0000      1.0000          20
+2_Autres            0.9091      0.4545      0.6061          22
+Moyenne macro       0.8407      0.8015      0.7837          62
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.7837
+Loss validation : 0.5119
+Loss test : 0.3002
+Accuracy test : 0.9286
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     36             0             2
+1_Invites                  0            36             0
+2_Autres                   6             0            32
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.8571      0.9474      0.9000          38
+1_Invites           1.0000      1.0000      1.0000          36
+2_Autres            0.9412      0.8421      0.8889          38
+Moyenne macro       0.9328      0.9298      0.9296         112
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-02 22:11:19
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 186
+Images validation : 54
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 13
+Epoques executees : 25
+Loss train a la meilleure epoque : 0.8433
+Accuracy train a la meilleure epoque : 0.6667
+Validation loss : 1.0707
+Validation accuracy : 0.3148
+Validation F1 macro : 0.3016
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                      5             0            11
+1_Invites                  0             2            18
+2_Autres                   4             4            10
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5556      0.3125      0.4000          16
+1_Invites           0.3333      0.1000      0.1538          20
+2_Autres            0.2564      0.5556      0.3509          18
+Moyenne macro       0.3818      0.3227      0.3016          54
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.3016
+Loss validation : 1.0707
+Loss test : 1.0719
+Accuracy test : 0.3167
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                      0             0            20
+1_Invites                  0             0            20
+2_Autres                   1             0            19
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.0000      0.0000      0.0000          20
+1_Invites           0.0000      0.0000      0.0000          20
+2_Autres            0.3220      0.9500      0.4810          20
+Moyenne macro       0.1073      0.3167      0.1603          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-02 22:18:48
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 191
+Images validation : 49
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 32
+Epoques executees : 44
+Loss train a la meilleure epoque : 0.4990
+Accuracy train a la meilleure epoque : 0.7749
+Validation loss : 0.7430
+Validation accuracy : 0.7143
+Validation F1 macro : 0.7211
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             1
+1_Invites                  5            11             0
+2_Autres                   8             0             9
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5357      0.9375      0.6818          16
+1_Invites           1.0000      0.6875      0.8148          16
+2_Autres            0.9000      0.5294      0.6667          17
+Moyenne macro       0.8119      0.7181      0.7211          49
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.7211
+Loss validation : 0.7430
+Loss test : 0.5910
+Accuracy test : 0.7167
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     16             0             4
+1_Invites                  3            17             0
+2_Autres                   8             2            10
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5926      0.8000      0.6809          20
+1_Invites           0.8947      0.8500      0.8718          20
+2_Autres            0.7143      0.5000      0.5882          20
+Moyenne macro       0.7339      0.7167      0.7136          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-02 22:22:30
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 186
+Images validation : 54
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 13
+Epoques executees : 25
+Loss train a la meilleure epoque : 0.8433
+Accuracy train a la meilleure epoque : 0.6667
+Validation loss : 1.0707
+Validation accuracy : 0.3148
+Validation F1 macro : 0.3016
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                      5             0            11
+1_Invites                  0             2            18
+2_Autres                   4             4            10
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5556      0.3125      0.4000          16
+1_Invites           0.3333      0.1000      0.1538          20
+2_Autres            0.2564      0.5556      0.3509          18
+Moyenne macro       0.3818      0.3227      0.3016          54
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.3016
+Loss validation : 1.0707
+Loss test : 1.0719
+Accuracy test : 0.3167
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                      0             0            20
+1_Invites                  0             0            20
+2_Autres                   1             0            19
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.0000      0.0000      0.0000          20
+1_Invites           0.0000      0.0000      0.0000          20
+2_Autres            0.3220      0.9500      0.4810          20
+Moyenne macro       0.1073      0.3167      0.1603          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-02 22:24:03
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 191
+Images validation : 49
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 32
+Epoques executees : 44
+Loss train a la meilleure epoque : 0.4990
+Accuracy train a la meilleure epoque : 0.7749
+Validation loss : 0.7430
+Validation accuracy : 0.7143
+Validation F1 macro : 0.7211
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     15             0             1
+1_Invites                  5            11             0
+2_Autres                   8             0             9
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5357      0.9375      0.6818          16
+1_Invites           1.0000      0.6875      0.8148          16
+2_Autres            0.9000      0.5294      0.6667          17
+Moyenne macro       0.8119      0.7181      0.7211          49
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.7211
+Loss validation : 0.7430
+Loss test : 0.5910
+Accuracy test : 0.7167
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     16             0             4
+1_Invites                  3            17             0
+2_Autres                   8             2            10
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5926      0.8000      0.6809          20
+1_Invites           0.8947      0.8500      0.8718          20
+2_Autres            0.7143      0.5000      0.5882          20
+Moyenne macro       0.7339      0.7167      0.7136          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
+
+========================================================================
+SESSION : 2026-10-02 22:27:45
+Modele : MLP retenu, dropout 0.35 / 0.15
+Classes : ['0_Moi', '1_Invites', '2_Autres']
+Images train : 190
+Images validation : 50
+Images test : 60
+
+ESSAI 1 : mlp_dropout_0.35_0.15
+Configuration : {'nom': 'mlp_dropout_0.35_0.15', 'type': 'MLP', 'dropout_1': 0.35, 'dropout_2': 0.15}
+Parametres du modele : 133315
+Meilleure epoque : 26
+Epoques executees : 38
+Loss train a la meilleure epoque : 0.6041
+Accuracy train a la meilleure epoque : 0.7474
+Validation loss : 0.9687
+Validation accuracy : 0.5400
+Validation F1 macro : 0.5458
+===== VALIDATION : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     11             0             5
+1_Invites                  2             9             5
+2_Autres                   8             3             7
+
+===== VALIDATION : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.5238      0.6875      0.5946          16
+1_Invites           0.7500      0.5625      0.6429          16
+2_Autres            0.4118      0.3889      0.4000          18
+Moyenne macro       0.5619      0.5463      0.5458          50
+
+MEILLEUR MODELE SELECTIONNE : mlp_dropout_0.35_0.15
+Type de modele : MLP
+F1 macro validation : 0.5458
+Loss validation : 0.9687
+Loss test : 0.5798
+Accuracy test : 0.8333
+===== TEST : MATRICE DE CONFUSION =====
+Lignes : classes reelles | Colonnes : classes predites
+                       0_Moi     1_Invites      2_Autres
+0_Moi                     18             0             2
+1_Invites                  1            17             2
+2_Autres                   4             1            15
+
+===== TEST : RESULTATS PAR CLASSE =====
+Classe           Precision      Rappel    F1-score     Support
+0_Moi               0.7826      0.9000      0.8372          20
+1_Invites           0.9444      0.8500      0.8947          20
+2_Autres            0.7895      0.7500      0.7692          20
+Moyenne macro       0.8388      0.8333      0.8337          60
+Modele sauvegarde : modele_reconnaissance_vocale.h5
+Courbes sauvegardees : courbes_entrainement.png
+Rapport : resultats_entrainement.txt
