@@ -1,0 +1,13 @@
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.vscode/
+.ipynb_checkpoints/
+
+# Donnees vocales et artefacts generes (potentiellement sensibles)
+/Donnees/
+/Donnees_MFCC/
+/Modele/
